@@ -6,24 +6,52 @@
     <title>Agency Cokal Travel - Coming Soon</title>
     <link rel="stylesheet" href="cokal.css">
     <link rel="icon" href="logo.png" type="image/png">
-    <!-- Add Font Awesome for social icons -->
+    <!-- Add Google Fonts for modern typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Add Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    <div class="theme-toggle">
+        <button id="themeButton">
+            <i class="fas fa-moon"></i> <!-- Default to dark theme -->
+        </button>
+    </div>
+
     <div class="container">
-        <div class="left-side">
-            <div class="content">
-                <img src="logo.png" alt="Cokal Travel Logo" class="logo" id="logo">
-                <h1>Agency Cokal Travel</h1>
-                <h2>We're working on our new website!</h2>
-                <p class="coming-soon">Coming Soon</p>
-                <!-- Add Facebook link with icon -->
-                <a href="https://www.facebook.com/profile.php?id=100076697781065" target="_blank" class="social-link">
-                    <i class="fab fa-facebook-f"></i> Follow us on Facebook
+        <div class="content">
+            <img src="logo.png" alt="Cokal Travel Logo" class="logo">
+            <h1>Agency Cokal Travel</h1>
+            <h2>We're crafting an unforgettable experience for you!</h2>
+            <p class="coming-soon">Coming Soon</p>
+            <!-- Countdown Timer -->
+            <div class="countdown-timer">
+                <div class="timer-item">
+                    <span id="days">00</span>
+                    <span class="timer-label">Days</span>
+                </div>
+                <div class="timer-item">
+                    <span id="hours">00</span>
+                    <span class="timer-label">Hours</span>
+                </div>
+                <div class="timer-item">
+                    <span id="minutes">00</span>
+                    <span class="timer-label">Minutes</span>
+                </div>
+                <div class="timer-item">
+                    <span id="seconds">00</span>
+                    <span class="timer-label">Seconds</span>
+                </div>
+            </div>
+            <h2>You can visit our Facebook page for updates</h2>
+            <div class="social-links">
+                <a href="https://www.facebook.com/yourpage" target="_blank" class="social-link">
+                   
+                    <i class="fab fa-facebook-f"></i>
                 </a>
+            
             </div>
         </div>
-        <div class="right-side"></div>
     </div>
 
     <footer>
