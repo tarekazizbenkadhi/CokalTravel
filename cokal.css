@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center items horizontally */
+    animation: fadeIn 2s ease-in-out;
+}
+
+.logo {
+    width: 200px;
+    animation: bounce 2s infinite;
+    transition: transform 0.5s ease;
+    position: relative; /* Changed from absolute to relative */
+    transform-origin: center;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #FFC516; /* First text color */
+}
+
+h2, .coming-soon {
+    font-size: 24px;
+    color: #58B5CD; /* Second and Coming Soon text color */
+    margin-bottom: 10px;
+}
+
+.coming-soon {
+    font-size: 20px;
+    font-weight: bold;
+    animation: slideIn 2s ease-in-out;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+footer {
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+}
