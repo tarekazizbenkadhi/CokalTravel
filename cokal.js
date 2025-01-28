@@ -12,9 +12,11 @@ document.addEventListener("DOMContentLoaded", function() {
     // Update current date and time every second
     function updateDateTime() {
         const dateTimeElement = document.getElementById('dateTime');
-        const now = new Date();
-        const formattedDateTime = now.toLocaleString();
-        dateTimeElement.textContent = formattedDateTime;
+        if (dateTimeElement) {
+            const now = new Date();
+            const formattedDateTime = now.toLocaleString();
+            dateTimeElement.textContent = formattedDateTime;
+        }
     }
 
     setInterval(updateDateTime, 1000);
