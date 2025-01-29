@@ -25,11 +25,14 @@ body.dark-theme {
 }
 
 .container {
-    max-width: 800px;
-    width: 90%; /* Responsive width */
+    width: 100%; /* Full width */
+    min-height: 100vh; /* Full height */
     padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: rgba(255, 255, 255, 0.9); /* Light theme container */
-    border-radius: 20px;
+    border-radius: 0; /* Remove border radius for full-page layout */
     backdrop-filter: blur(10px);
     border: 1px solid rgba(0, 0, 0, 0.1);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -47,6 +50,8 @@ body.dark-theme {
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    width: 100%; /* Full width */
+    max-width: 800px; /* Limit max width for larger screens */
 }
 
 .logo {
@@ -249,6 +254,10 @@ footer {
 }
 
 @media (max-width: 480px) {
+    .container {
+        padding: 10px; /* Reduce padding for mobile */
+    }
+
     h1 {
         font-size: 24px; /* Smaller font size for mobile */
     }
@@ -286,4 +295,37 @@ footer {
     footer {
         font-size: 10px; /* Smaller font size for mobile */
     }
+    /* Theme Toggle Button */
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000; /* Ensure it's above other elements */
+}
+
+.theme-toggle button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #333; /* Light theme icon */
+    transition: color 0.3s ease;
+    padding: 10px; /* Add padding for better clickability */
+    border-radius: 50%; /* Circular button */
+    background-color: rgba(255, 255, 255, 0.8); /* Light background for visibility */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+.theme-toggle button:hover {
+    background-color: rgba(255, 255, 255, 1); /* Brighter on hover */
+}
+
+.dark-theme .theme-toggle button {
+    color: #ffffff; /* Dark theme icon */
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background for visibility */
+}
+
+.dark-theme .theme-toggle button:hover {
+    background-color: rgba(0, 0, 0, 1); /* Brighter on hover */
+}
 }
